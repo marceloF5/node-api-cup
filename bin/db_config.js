@@ -1,7 +1,7 @@
 module.exports = {
     host: "mysqld.ftd.com.br",	
     user: "ftdcup",
-    password: "$2-yrYPz",
+    password: "",
     database : 'ftd_cup',
     port : 3306 
 }
