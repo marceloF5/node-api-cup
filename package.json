@@ -4,7 +4,8 @@
   "description": "CUP API",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node ./bin/index.js"
+    "start": "babel-node ./bin/index.js",
+    "test": "SET NODE_ENV && mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,17 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.2",
     "consign": "^0.1.6",
+    "cors": "^2.8.4",
     "express": "^4.16.1",
     "mysql2": "^1.4.2",
     "sequelize": "^4.13.5"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
   }
 }

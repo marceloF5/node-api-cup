@@ -5,11 +5,20 @@ module.exports = app => {
     var controller = {};
 
     controller.list = (req, res) => {
-        const sql = "SELECT idt_projeto, id_gestao, nome_projeto FROM projetos";
+        const sql = 'SELECT idt_projeto, id_gestao, nome_projeto FROM projetos';
         
         sequelize.query(sql).spread((results, metadata) => {
             res.status(200).json(metadata);
         });
+    }
+
+    controller.versao = (req, res) => {
+        const sql = 'SELECT idt_versao,desc_versao,codigo_erp FROM versao';
+
+        sequelize.query(sql).spread((results, metadata) => {
+            res.status(200).json(metadata);
+        });
+
     }
 
     return controller;

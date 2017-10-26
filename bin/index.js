@@ -12,3 +12,5 @@ consign()
     .then('src/routes')
     .then('bin/boot.js')
     .into(app);
+
+module.exports = app;
